@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notification Panel</title>
+  <style>
+    /* Notification panel styles */
+    .notification-panel {
+      position: fixed;
+      top: 20px;
+      width: 96.5%;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .notification-panel .profile-picture {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .notification-panel .heading {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .notification-panel .message {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .notification-panel .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .notification-panel .close-button:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- Notification Panel -->
+  <div class="notification-panel">
+    <img class="profile-picture" src="images/download.jpeg" alt="Profile Picture">
+    <div class="heading">Notification Heading</div>
+    <div class="message">This is a sample notification message.</div>
+    <span class="close-button" onclick="closeNotificationPanel()">&#10006;</span>
+  </div>
+
+  
+
+  <!-- JavaScript to close the notification panel -->
+  <script>
+    function closeNotificationPanel() {
+      var notificationPanel = document.querySelector(".notification-panel");
+      notificationPanel.style.display = "none";
+    }
+  </script>
+</body>
+</html>
